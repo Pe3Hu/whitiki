@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm5solna0ykpd"]
+
+[ext_resource type="Script" path="res://scene/3/boundary.gd" id="1_65vg3"]
+
+[node name="Boundary" type="Line2D"]
+default_color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+script = ExtResource("1_65vg3")

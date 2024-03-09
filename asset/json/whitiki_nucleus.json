@@ -1,0 +1,41 @@
+[
+ {
+  "title": "rock",
+  "absorption intensity": 9,
+  "dispersion intensity": 3,
+  "absorption area": 5,
+  "dispersion area": 3,
+  "retention proportion": 0.6,
+  "refund proportion": 0.15,
+  "retention factor": 0.9,
+  "refund factor": 0.9,
+  "volume storage": 400,
+  "material storage": "ore"
+ },
+ {
+  "title": "plant",
+  "absorption intensity": 7,
+  "dispersion intensity": 5,
+  "absorption area": 4,
+  "dispersion area": 4,
+  "retention proportion": 0.55,
+  "refund proportion": 0.25,
+  "retention factor": 0.7,
+  "refund factor": 1.2,
+  "volume storage": 200,
+  "material storage": "fiber"
+ },
+ {
+  "title": "pond",
+  "absorption intensity": 6,
+  "dispersion intensity": 6,
+  "absorption area": 3,
+  "dispersion area": 5,
+  "retention proportion": 0.2,
+  "refund proportion": 0.5,
+  "retention factor": 0.5,
+  "refund factor": 1.5,
+  "volume storage": 100,
+  "material storage": "droplet"
+ }
+]

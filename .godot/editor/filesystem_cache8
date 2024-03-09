@@ -1,0 +1,73 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1709984445
+::res://asset/::1709987134
+default_env.tres::Environment::-1::1690116911::0::1::::<><>::
+icon.png::CompressedTexture2D::2432420761471245026::1690116911::1693579465::1::::<><>::
+icon.svg::CompressedTexture2D::9162371498834860976::1690116911::1693579465::1::::<><>::
+README.md::TextFile::-1::1690795285::0::1::::<><>::
+::res://asset/font/::1709984388
+::res://asset/font/digital/::1709984388
+Cilok There.otf::FontFile::5203477456367898423::1692120832::1693579465::1::::<><>::
+Montserrat-Regular.ttf::FontFile::8955316622152098618::1390883084::1693579465::1::::<><>::
+SwilyBright-Italic.otf::FontFile::4711532664557462683::1689611680::1693579465::1::::<><>::
+::res://asset/font/letter/::1709984388
+Chunk Five Print.otf::FontFile::7482982434189746187::1693025532::1693579465::1::::<><>::
+JosefinSans-Bold.ttf::FontFile::3888160851700023909::1693025548::1693579465::1::::<><>::
+LeagueGothic-Regular.otf::FontFile::2105460648084705691::1693025542::1693579465::1::::<><>::
+::res://asset/json/::1709986173
+whitiki_land.json::JSON::-1::1693582786::0::1::::<><>::
+whitiki_nucleus.json::JSON::-1::1709986173::0::1::::<><>::
+::res://asset/png/::1709987164
+::res://asset/png/nexus/::1709987381
+ascension.png::CompressedTexture2D::4477089103809658800::1709987359::1709987508::1::::<><>::
+current count.png::CompressedTexture2D::1631600446595721561::1709987068::1709987508::1::::<><>::
+input mana.png::CompressedTexture2D::2196002064084721970::1709987003::1709987508::1::::<><>::
+output mana.png::CompressedTexture2D::974318650580215196::1709987052::1709987508::1::::<><>::
+rank.png::CompressedTexture2D::750340110819835186::1709985322::1709987508::1::::<><>::
+recuperation.png::CompressedTexture2D::403241236733929938::1709987272::1709987508::1::::<><>::
+storage.png::CompressedTexture2D::4245494049718887051::1709987289::1709987508::1::::<><>::
+total count.png::CompressedTexture2D::2598381806509992189::1709987133::1709987508::1::::<><>::
+::res://asset/png/nucleus/::1709987149
+plant.png::CompressedTexture2D::7754802286667468090::1709984579::1709987508::1::::<><>::
+pond.png::CompressedTexture2D::7105822206122415525::1709984619::1709987508::1::::<><>::
+rock.png::CompressedTexture2D::1601828281718218275::1709984599::1709987508::1::::<><>::
+::res://scene/::1709984388
+::res://scene/0/::1709985120
+blank.tscn::PackedScene::706186300528003691::1709984457::0::1::::<><>::
+game.gd::GDScript::-1::1709985120::0::1::::<>Node<>::
+game.tscn::PackedScene::8246655032211948728::1709980022::0::1::::<><>::res://scene/0/game.gd<>uid://bx2v4ayiwnedr::::res://scene/0/sketch.tscn
+icon.gd::GDScript::-1::1709979760::0::1::::<>MarginContainer<>::
+icon.tscn::PackedScene::1509172190903441627::1709980022::0::1::::<><>::res://scene/0/icon.gd<>uid://deu2vlj4q8un0::::res://asset/font/letter/Chunk Five Print.otf
+sketch.gd::GDScript::-1::1709979941::0::1::::<>MarginContainer<>::
+sketch.tscn::PackedScene::4057829169067502031::1709980022::0::1::::<><>::res://scene/0/sketch.gd<>res://scene/1/cradle.tscn<>res://scene/2/universe.tscn
+::res://scene/1/::1709984388
+cradle.gd::GDScript::-1::1708681862::0::1::::<>MarginContainer<>::
+cradle.tscn::PackedScene::1351374215482788775::1703260768::0::1::::<><>::res://scene/1/cradle.gd
+god.gd::GDScript::-1::1709517016::0::1::::<>MarginContainer<>::
+god.tscn::PackedScene::4610960895289747470::1703260834::0::1::::<><>::res://scene/1/god.gd
+pantheon.gd::GDScript::-1::1703261646::0::1::::<>MarginContainer<>::
+pantheon.tscn::PackedScene::6628520103918968447::1703260756::0::1::::<><>::res://scene/1/pantheon.gd
+::res://scene/2/::1709986855
+ocean.gd::GDScript::-1::1709980388::0::1::::<>MarginContainer<>::
+ocean.tscn::PackedScene::8830168931658770235::1709980388::0::1::::<><>::res://scene/2/ocean.gd
+sea.gd::GDScript::-1::1709984505::0::1::::<>MarginContainer<>::
+sea.tscn::PackedScene::7850408246404888378::1709986855::0::1::::<><>::res://scene/2/sea.gd<>uid://rm5xf5bx1bji::::res://scene/4/biome.tscn<>uid://bgu61iohypbuf::::res://scene/3/archipelago.tscn
+universe.gd::GDScript::-1::1709980933::0::1::::<>MarginContainer<>::
+universe.tscn::PackedScene::4373149442950008506::1709984337::0::1::::<><>::res://scene/2/universe.gd
+::res://scene/3/::1709986855
+archipelago.gd::GDScript::-1::1709984514::0::1::::<>MarginContainer<>::
+archipelago.tscn::PackedScene::2850770400184552969::1709986855::0::1::::<><>::res://scene/3/archipelago.gd
+boundary.gd::GDScript::-1::1709980647::0::1::::<>Line2D<>::
+boundary.tscn::PackedScene::3291736644829420601::1709984337::0::1::::<><>::res://scene/3/boundary.gd
+island.gd::GDScript::-1::1709981465::0::1::::<>MarginContainer<>::
+island.tscn::PackedScene::4967271611780172131::1709984337::0::1::::<><>::res://scene/3/island.gd
+land.gd::GDScript::-1::1709981583::0::1::::<>MarginContainer<>::
+land.tscn::PackedScene::7809543789830431510::1709984337::0::1::::<><>::res://scene/3/land.gd
+::res://scene/4/::1709986855
+biome.tscn::PackedScene::1219845766976152094::1709986855::0::1::::<><>::res://scene/4/biome.gd
+biome.gd::GDScript::-1::1709984539::0::1::::<>MarginContainer<>::
+::res://scene/5/::1709981386
+::res://scene/6/::1707430478
+::res://scene/7/::1709980706
+::res://script/::1709986854
+Global.gd::GDScript::-1::1709986854::0::1::::<>Node<>::
