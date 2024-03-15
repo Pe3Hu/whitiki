@@ -1,10 +1,7 @@
-res://scene/3/archipelago.tscn
-res://scene/0/blank.tscn
-res://scene/4/biome.tscn
-res://scene/3/archipelago.gd
 res://scene/2/sea.tscn
-res://scene/2/sea.gd
-res://scene/4/biome.gd
-res://script/Global.gd
-res://scene/0/game.gd
-res://asset/json/whitiki_nucleus.json
+res://scene/1/god.tscn
+res://scene/6/core.tscn
+res://scene/6/summary.tscn
+res://scene/6/channel.tscn
+res://scene/6/aspect.tscn
+res://scene/6/indicator.tscn

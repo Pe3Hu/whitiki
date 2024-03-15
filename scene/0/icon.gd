@@ -14,8 +14,8 @@ var subtype = null
 
 #region init
 func set_attributes(input_: Dictionary) -> void:
-	type  = input_.type
-	subtype  = input_.subtype
+	type = input_.type
+	subtype = input_.subtype
 	
 	init_basic_setting()
 
@@ -26,8 +26,7 @@ func init_basic_setting() -> void:
 	
 	if !exceptions.has(type):
 		#custom_minimum_size = Vector2(Global.vec.size[type])
-		#update_image()
-		pass
+		update_image()
 	
 	match type:
 		"number":
@@ -50,13 +49,9 @@ func update_image() -> void:
 	path += type + "/" + str(subtype) + ".png"
 	textureRect.texture = load(path)
 	
-
-
-func set_bg_color(color_: Color) -> void:
-	var style = StyleBoxFlat.new()
-	style.bg_color = color_
-	bg.set("theme_override_styles/panel", style)
-	bg.visible = true
+	#var style = StyleBoxFlat.new()
+	#style.bg_color = Color.SLATE_GRAY
+	#bg.set("theme_override_styles/panel", style)
 #endregion
 
 
