@@ -34,6 +34,7 @@ func init_arr() -> void:
 	arr.indicator = ["health", "endurance"]
 	arr.role = ["offensive", "defensive"]
 	arr.side = ["left", "right"]
+	arr.talent = ["discipline", "inheritance", "insight", "overcome"]
 	
 	
 	arr.phase = {
@@ -97,12 +98,15 @@ func init_num() -> void:
 
 func init_dict() -> void:
 	init_neighbor()
-	init_land()
-	init_nucleus()
 	init_multipliers()
 	init_phase()
 	init_markers()
 	init_aspects()
+	
+	init_land()
+	init_nucleus()
+	init_action()
+	init_talent()
 
 
 func init_neighbor() -> void:
@@ -223,7 +227,7 @@ func init_aspects() -> void:
 	
 	for branch in arr.branch:
 		dict.aspect.weight[branch] = round(dict.aspect.weight[branch] * 100 / (num.aspect.avg * arr.branch.size()))#* num.aspect.total / 100.0)
-	
+
 
 func init_land() -> void:
 	dict.island = {}
@@ -322,13 +326,55 @@ func init_nucleus() -> void:
 		dict.nucleus.title[nucleus.title] = data
 
 
+func init_action() -> void:
+	dict.action = {}
+	dict.action.role = {}
+	var exceptions = ["role", "type"]
+	
+	var path = "res://asset/json/whitiki_action.json"
+	var array = load_data(path)
+	
+	for action in array:
+		var data = {}
+		
+		for key in action:
+			if !exceptions.has(key):
+				var words = key.split(" ")
+				
+				if words.size() > 1:
+					if !data.has(words[1]):
+						data[words[1]] = {}
+				
+					data[words[1]][words[0]] = action[key]
+				else:
+					data[key] = action[key]
+		
+		if !dict.action.role.has(action.role):
+			dict.action.role[action.role] = {}
+		
+		if !dict.action.role[action.role].has(action.type):
+			dict.action.role[action.role][action.type] = []
+		
+		dict.action.role[action.role][action.type].append(data)
+
+
+func init_talent() -> void:
+	dict.talent = {}
+	dict.talent.rank = {}
+	
+	var path = "res://asset/json/whitiki_talent.json"
+	var array = load_data(path)
+	
+	for talent in array:
+		dict.talent.rank[talent.title.to_lower()] = talent.value
+
+
 func init_node() -> void:
 	node.game = get_node("/root/Game")
 
 
 func init_scene() -> void:
 	scene.icon = load("res://scene/0/icon.tscn")
-	
 	
 	scene.pantheon = load("res://scene/1/pantheon.tscn")
 	scene.god = load("res://scene/1/god.tscn")
@@ -347,6 +393,7 @@ func init_scene() -> void:
 	scene.challenger = load("res://scene/5/challenger.tscn")
 	
 	scene.aspect = load("res://scene/6/aspect.tscn")
+	scene.talent = load("res://scene/6/talent.tscn")
 
 
 func init_vec():
@@ -363,6 +410,7 @@ func init_vec():
 	vec.size.shedule = Vector2(vec.size.token.x * 4, vec.size.token.y)
 	vec.size.encounter = Vector2(vec.size.token.x * 6, vec.size.token.y)
 	vec.size.channel = Vector2(vec.size.token.x * num.channel.n - 1, vec.size.token.y)
+	vec.size.talent = Vector2(vec.size.token)
 	
 	init_window_size()
 

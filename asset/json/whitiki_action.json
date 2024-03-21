@@ -1,0 +1,164 @@
+[
+ {
+  "role": "defence",
+  "min roll": 0,
+  "max roll": 1,
+  "type": "dodge",
+  "value": 20,
+  "count": 5,
+  "chance": 0.15
+ },
+ {
+  "role": "defence",
+  "min roll": 2,
+  "max roll": 5,
+  "type": "dodge",
+  "value": 30,
+  "count": 4,
+  "chance": 0.3
+ },
+ {
+  "role": "defence",
+  "min roll": 6,
+  "max roll": 7,
+  "type": "dodge",
+  "value": 40,
+  "count": 3,
+  "chance": 0.45
+ },
+ {
+  "role": "defence",
+  "min roll": 0,
+  "max roll": 1,
+  "type": "block",
+  "value": 16,
+  "count": 2,
+  "chance": 0.9
+ },
+ {
+  "role": "defence",
+  "min roll": 2,
+  "max roll": 5,
+  "type": "block",
+  "value": 18,
+  "count": 2,
+  "chance": 0.95
+ },
+ {
+  "role": "defence",
+  "min roll": 6,
+  "max roll": 7,
+  "type": "block",
+  "value": 20,
+  "count": 2,
+  "chance": 1
+ },
+ {
+  "role": "defence",
+  "min roll": 0,
+  "max roll": 1,
+  "type": "parry",
+  "value": 21,
+  "count": 1,
+  "chance": 0.6
+ },
+ {
+  "role": "defence",
+  "min roll": 2,
+  "max roll": 5,
+  "type": "parry",
+  "value": 18,
+  "count": 2,
+  "chance": 0.5
+ },
+ {
+  "role": "defence",
+  "min roll": 6,
+  "max roll": 7,
+  "type": "parry",
+  "value": 15,
+  "count": 3,
+  "chance": 0.4
+ },
+ {
+  "role": "offence",
+  "min roll": 0,
+  "max roll": 3,
+  "type": "single",
+  "value": 48,
+  "count": 1,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 4,
+  "max roll": 11,
+  "type": "single",
+  "value": 60,
+  "count": 1,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 12,
+  "max roll": 15,
+  "type": "single",
+  "value": 72,
+  "count": 1,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 0,
+  "max roll": 3,
+  "type": "fan",
+  "value": 16,
+  "count": 3,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 4,
+  "max roll": 11,
+  "type": "fan",
+  "value": 20,
+  "count": 3,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 12,
+  "max roll": 15,
+  "type": "fan",
+  "value": 24,
+  "count": 3,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 0,
+  "max roll": 3,
+  "type": "chain",
+  "value": 22,
+  "count": 3,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 4,
+  "max roll": 11,
+  "type": "chain",
+  "value": 28,
+  "count": 3,
+  "chance": 1
+ },
+ {
+  "role": "offense",
+  "min roll": 12,
+  "max roll": 15,
+  "type": "chain",
+  "value": 33,
+  "count": 3,
+  "chance": 1
+ }
+]

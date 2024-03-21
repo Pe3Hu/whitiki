@@ -2,8 +2,9 @@ extends MarginContainer
 
 
 #region vars
-@onready var channel = $VBox/Channel
-@onready var aspects = $VBox/Aspects
+@onready var pedigree = $HBox/Pedigree
+@onready var channel = $HBox/VBox/Channel
+@onready var aspects = $HBox/VBox/Aspects
 
 var god = null
 var roots = {}
@@ -21,13 +22,17 @@ func set_attributes(input_: Dictionary) -> void:
 
 
 func init_basic_setting() -> void:
+	init_pedigree()
 	init_predispositions()
 	init_aspects()
 	spread_aspects()
 	god.core.update_indicators()
-	
+
+
+func init_pedigree() -> void:
 	var input = {}
 	input.summary = self
+	pedigree.set_attributes(input)
 	channel.set_attributes(input)
 
 

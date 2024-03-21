@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf62c6vgstb83"]
+[gd_scene load_steps=5 format=3 uid="uid://bf62c6vgstb83"]
 
 [ext_resource type="Script" path="res://scene/6/summary.gd" id="1_n0kia"]
 [ext_resource type="PackedScene" uid="uid://0rqan0m7skap" path="res://scene/6/channel.tscn" id="2_hq07h"]
+[ext_resource type="PackedScene" uid="uid://b1fg5wppchyy4" path="res://scene/6/pedigree.tscn" id="2_i6e33"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7paps"]
 
@@ -27,15 +28,23 @@ visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7paps")
 
-[node name="VBox" type="VBoxContainer" parent="."]
+[node name="HBox" type="HBoxContainer" parent="."]
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Channel" parent="VBox" instance=ExtResource("2_hq07h")]
+[node name="Pedigree" parent="HBox" instance=ExtResource("2_i6e33")]
 layout_mode = 2
 
-[node name="Aspects" type="GridContainer" parent="VBox"]
+[node name="VBox" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Channel" parent="HBox/VBox" instance=ExtResource("2_hq07h")]
+layout_mode = 2
+
+[node name="Aspects" type="GridContainer" parent="HBox/VBox"]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0

@@ -1,7 +1,10 @@
-res://scene/2/sea.tscn
-res://scene/1/god.tscn
-res://scene/6/core.tscn
+res://scene/6/talent.tscn
+res://scene/6/pedigree.tscn
+res://scene/6/talent.gd
 res://scene/6/summary.tscn
-res://scene/6/channel.tscn
-res://scene/6/aspect.tscn
-res://scene/6/indicator.tscn
+res://scene/6/pedigree.gd
+res://scene/6/summary.gd
+res://scene/2/sea.tscn
+res://scene/0/game.gd
+res://script/Global.gd
+res://scene/1/god.tscn
