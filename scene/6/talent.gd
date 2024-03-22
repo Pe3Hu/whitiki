@@ -28,3 +28,4 @@ func init_basic_setting(input_: Dictionary) -> void:
 	input.subtype = input_.rank
 	rank.set_attributes(input)
 	rank.custom_minimum_size = Vector2(Global.vec.size.talent)
+#endregion

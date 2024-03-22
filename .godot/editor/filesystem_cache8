@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710986063
+::res://::1711064666
 ::res://asset/::1709987134
 default_env.tres::Environment::-1::1690116911::0::1::::<><>::
 icon.png::CompressedTexture2D::2432420761471245026::1690116911::1693579465::1::::<><>::
@@ -14,9 +14,11 @@ SwilyBright-Italic.otf::FontFile::4711532664557462683::1689611680::1693579465::1
 Chunk Five Print.otf::FontFile::7482982434189746187::1693025532::1693579465::1::::<><>::
 JosefinSans-Bold.ttf::FontFile::3888160851700023909::1693025548::1693579465::1::::<><>::
 LeagueGothic-Regular.otf::FontFile::2105460648084705691::1693025542::1693579465::1::::<><>::
-::res://asset/json/::1709986173
+::res://asset/json/::1710986524
+whitiki_action.json::JSON::-1::1710967086::0::1::::<><>::
 whitiki_land.json::JSON::-1::1693582786::0::1::::<><>::
 whitiki_nucleus.json::JSON::-1::1709986173::0::1::::<><>::
+whitiki_talent.json::JSON::-1::1710967086::0::1::::<><>::
 ::res://asset/png/::1710985932
 ::res://asset/png/accuracy/::1710519014
 advantage.png::CompressedTexture2D::8942788278444069775::1710432492::1710519014::1::::<><>::
@@ -108,9 +110,9 @@ resistance.png::CompressedTexture2D::1139856030102299877::1701983353::1710519014
 tension.png::CompressedTexture2D::1279227997452754794::1701983678::1710519014::1::::<><>::
 volume.png::CompressedTexture2D::1460269547893314423::1701983956::1710519014::1::::<><>::
 ::res://scene/::1710518650
-::res://scene/0/::1710986063
+::res://scene/0/::1710986911
 blank.tscn::PackedScene::706186300528003691::1709984457::0::1::::<><>::
-game.gd::GDScript::-1::1709985120::0::1::::<>Node<>::
+game.gd::GDScript::-1::1710986911::0::1::::<>Node<>::
 game.tscn::PackedScene::8246655032211948728::1709980022::0::1::::<><>::res://scene/0/game.gd<>uid://bx2v4ayiwnedr::::res://scene/0/sketch.tscn
 icon.gd::GDScript::-1::1710425051::0::1::::<>MarginContainer<>::
 icon.tscn::PackedScene::5381527879177219912::1709234056::0::1::::<><>::res://scene/0/icon.gd<>uid://deu2vlj4q8un0::::res://asset/font/letter/Chunk Five Print.otf
@@ -118,18 +120,18 @@ sketch.gd::GDScript::-1::1709979941::0::1::::<>MarginContainer<>::
 sketch.tscn::PackedScene::4057829169067502031::1709980022::0::1::::<><>::res://scene/0/sketch.gd<>res://scene/1/cradle.tscn<>res://scene/2/universe.tscn
 token.gd::GDScript::-1::1710435238::0::1::::<>MarginContainer<>::
 token.tscn::PackedScene::-1::1710429178::0::1::::<><>::
-::res://scene/1/::1710783180
+::res://scene/1/::1710987296
 cradle.gd::GDScript::-1::1708681862::0::1::::<>MarginContainer<>::
 cradle.tscn::PackedScene::1351374215482788775::1703260768::0::1::::<><>::res://scene/1/cradle.gd
 god.gd::GDScript::-1::1710435679::0::1::::<>MarginContainer<>::
-god.tscn::PackedScene::4610960895289747470::1710783180::0::1::::<><>::res://scene/1/god.gd<>res://scene/0/token.tscn<>uid://likoypjmwtku::::res://scene/6/core.tscn<>uid://bf62c6vgstb83::::res://scene/6/summary.tscn
+god.tscn::PackedScene::4610960895289747470::1710987296::0::1::::<><>::res://scene/1/god.gd<>res://scene/0/token.tscn<>uid://likoypjmwtku::::res://scene/6/core.tscn<>uid://bf62c6vgstb83::::res://scene/6/summary.tscn
 pantheon.gd::GDScript::-1::1703261646::0::1::::<>MarginContainer<>::
 pantheon.tscn::PackedScene::6628520103918968447::1703260756::0::1::::<><>::res://scene/1/pantheon.gd
-::res://scene/2/::1710783180
+::res://scene/2/::1710987296
 ocean.gd::GDScript::-1::1709980388::0::1::::<>MarginContainer<>::
 ocean.tscn::PackedScene::8830168931658770235::1709980388::0::1::::<><>::res://scene/2/ocean.gd
 sea.gd::GDScript::-1::1709987521::0::1::::<>MarginContainer<>::
-sea.tscn::PackedScene::7850408246404888378::1710783180::0::1::::<><>::res://scene/2/sea.gd<>uid://bgu61iohypbuf::::res://scene/3/archipelago.tscn
+sea.tscn::PackedScene::7850408246404888378::1710987296::0::1::::<><>::res://scene/2/sea.gd<>uid://bgu61iohypbuf::::res://scene/3/archipelago.tscn
 universe.gd::GDScript::-1::1709980933::0::1::::<>MarginContainer<>::
 universe.tscn::PackedScene::4373149442950008506::1709984337::0::1::::<><>::res://scene/2/universe.gd
 ::res://scene/3/::1710519031
@@ -159,7 +161,7 @@ moon.gd::GDScript::-1::1710518310::0::1::::<>MarginContainer<>::
 moon.tscn::PackedScene::-1::1710429178::0::1::::<><>::
 shedule.gd::GDScript::-1::1710518371::0::1::::<>MarginContainer<>::
 shedule.tscn::PackedScene::-1::1710429178::0::1::::<><>::
-::res://scene/6/::1710986063
+::res://scene/6/::1710987309
 aspect.gd::GDScript::-1::1710338783::0::1::::<>MarginContainer<>::
 aspect.tscn::PackedScene::2597953142080058195::1710519219::0::1::::<><>::res://scene/6/aspect.gd<>res://scene/0/token.tscn
 channel.gd::GDScript::-1::1710517856::0::1::::<>MarginContainer<>::
@@ -168,10 +170,12 @@ core.gd::GDScript::-1::1710435039::0::1::::<>MarginContainer<>::
 core.tscn::PackedScene::789225757251479172::1710519176::0::1::::<><>::uid://c56v03iscvl8s::::res://scene/6/indicator.tscn<>res://scene/6/core.gd
 indicator.gd::GDScript::-1::1710340879::0::1::::<>MarginContainer<>::
 indicator.tscn::PackedScene::6943823572432333736::1710519230::0::1::::<><>::res://scene/6/indicator.gd<>uid://deu2vlj4q8un0::::res://asset/font/letter/Chunk Five Print.otf
-pedigree.tscn::PackedScene::4222071562196264741::1710986057::0::1::::<><>::
-talent.tscn::PackedScene::2715663045395171688::1710986084::0::1::::<><>::
-summary.gd::GDScript::-1::1710517663::0::1::::<>MarginContainer<>::
-summary.tscn::PackedScene::2803005203613783226::1710519186::0::1::::<><>::res://scene/6/summary.gd<>uid://0rqan0m7skap::::res://scene/6/channel.tscn
+pedigree.gd::GDScript::-1::1710987127::0::1::::<>MarginContainer<>::
+pedigree.tscn::PackedScene::4222071562196264741::1710987296::0::1::::<><>::res://scene/6/pedigree.gd
+summary.gd::GDScript::-1::1710986390::0::1::::<>MarginContainer<>::
+summary.tscn::PackedScene::2803005203613783226::1710987297::0::1::::<><>::res://scene/6/summary.gd<>uid://0rqan0m7skap::::res://scene/6/channel.tscn<>uid://b1fg5wppchyy4::::res://scene/6/pedigree.tscn
+talent.gd::GDScript::-1::1710987186::0::1::::<>MarginContainer<>::
+talent.tscn::PackedScene::2715663045395171688::1710987309::0::1::::<><>::res://scene/6/talent.gd<>uid://ciw38iqel0v5a::::res://scene/0/icon.tscn
 ::res://scene/7/::1709980706
-::res://script/::1710519042
-Global.gd::GDScript::-1::1710519042::0::1::::<>Node<>::
+::res://script/::1710987309
+Global.gd::GDScript::-1::1710987309::0::1::::<>Node<>::

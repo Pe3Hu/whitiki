@@ -26,6 +26,8 @@ visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7paps")
 
-[node name="Gods" type="VBoxContainer" parent="."]
+[node name="Gods" type="GridContainer" parent="."]
 layout_mode = 2
-alignment = 1
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 5

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx2v4ayiwnedr"]
 
 [ext_resource type="Script" path="res://scene/0/sketch.gd" id="1_4hksh"]
-[ext_resource type="PackedScene" path="res://scene/1/cradle.tscn" id="2_8lyqd"]
-[ext_resource type="PackedScene" path="res://scene/2/universe.tscn" id="3_qbxso"]
+[ext_resource type="PackedScene" uid="uid://tiu625irnnwp" path="res://scene/1/cradle.tscn" id="2_8lyqd"]
+[ext_resource type="PackedScene" uid="uid://b3knerb4h2q7s" path="res://scene/2/universe.tscn" id="3_qbxso"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7paps"]
 bg_color = Color(0.372549, 0.372549, 0.372549, 1)
@@ -37,4 +37,5 @@ alignment = 1
 layout_mode = 2
 
 [node name="Universe" parent="HBox" instance=ExtResource("3_qbxso")]
+visible = false
 layout_mode = 2

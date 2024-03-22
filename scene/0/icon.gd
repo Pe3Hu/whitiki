@@ -98,3 +98,8 @@ func set_number(value_) -> void:
 			number.text = str(value)
 #endregion
 
+
+
+func set_subtype(subtype_: String) -> void:
+	subtype = subtype_
+	update_image()

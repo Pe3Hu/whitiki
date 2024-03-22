@@ -19,6 +19,7 @@ var neighbors = {}
 #endregion
 
 
+#region vars
 func set_attributes(input_: Dictionary) -> void:
 	for key in input_:
 		set(key, input_[key])
@@ -45,6 +46,7 @@ func set_style() -> void:
 	style.corner_radius_top_right = Global.num.land.r / 2
 	style.corner_radius_bottom_left = Global.num.land.r / 2
 	style.corner_radius_bottom_right = Global.num.land.r / 2
+#endregion
 
 
 func check_against_criterion(criterion_: String) -> bool:

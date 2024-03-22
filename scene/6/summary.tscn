@@ -42,9 +42,11 @@ theme_override_constants/separation = 0
 alignment = 1
 
 [node name="Channel" parent="HBox/VBox" instance=ExtResource("2_hq07h")]
+visible = false
 layout_mode = 2
 
 [node name="Aspects" type="GridContainer" parent="HBox/VBox"]
+visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0

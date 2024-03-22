@@ -34,7 +34,8 @@ func init_arr() -> void:
 	arr.indicator = ["health", "endurance"]
 	arr.role = ["offensive", "defensive"]
 	arr.side = ["left", "right"]
-	arr.talent = ["discipline", "inheritance", "insight", "overcome"]
+	arr.learnability = ["insight", "discipline", "overcome", "inheritance"]
+	arr.rank = ["f", "e", "d", "c", "b", "a", "s"]
 	
 	
 	arr.phase = {
@@ -94,6 +95,9 @@ func init_num() -> void:
 	
 	num.channel = {}
 	num.channel.n = 3
+	
+	num.talent = {}
+	num.talent.rarity = 5
 
 
 func init_dict() -> void:
@@ -367,6 +371,24 @@ func init_talent() -> void:
 	
 	for talent in array:
 		dict.talent.rank[talent.title.to_lower()] = talent.value
+	
+	
+	dict.rarity = {}
+	dict.rarity.learnability = {}
+	
+	for talent in arr.learnability:
+		dict.rarity.learnability[talent] = arr.learnability.find(talent) + 1
+	
+	dict.rarity.stigma = {}
+	dict.rarity.stigma["blessed"] = 1
+	dict.rarity.stigma["forgotten"] = 9
+	dict.rarity.stigma["cursed"] = 4
+	
+	dict.stigma = {}
+	dict.stigma.rank = {}
+	dict.stigma.rank["blessed"] = -1
+	dict.stigma.rank["forgotten"] = 0
+	dict.stigma.rank["cursed"] = 1
 
 
 func init_node() -> void:
