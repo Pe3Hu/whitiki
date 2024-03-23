@@ -14,15 +14,19 @@ var subtype = null
 
 #region init
 func set_attributes(input_: Dictionary) -> void:
-	proprietor = input_.proprietor
-	type = input_.type
-	subtype = input_.subtype
+	for key in input_:
+		if key != "value":
+			set(key, input_[key])
 	
 	init_basic_setting(input_)
 
 
 func init_basic_setting(input_: Dictionary) -> void:
 	custom_minimum_size = Vector2(Global.vec.size.token)
+	init_icons(input_)
+
+
+func init_icons(input_: Dictionary) -> void:
 	var input = {}
 	input.type = type
 	input.subtype = subtype

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf62c6vgstb83"]
+[gd_scene load_steps=6 format=3 uid="uid://bf62c6vgstb83"]
 
 [ext_resource type="Script" path="res://scene/6/summary.gd" id="1_n0kia"]
+[ext_resource type="PackedScene" uid="uid://b1fg5wppchyy4" path="res://scene/7/pedigree.tscn" id="2_h8ms1"]
 [ext_resource type="PackedScene" uid="uid://0rqan0m7skap" path="res://scene/6/channel.tscn" id="2_hq07h"]
-[ext_resource type="PackedScene" uid="uid://b1fg5wppchyy4" path="res://scene/6/pedigree.tscn" id="2_i6e33"]
+[ext_resource type="PackedScene" uid="uid://0nug8dwbmt0m" path="res://scene/7/career.tscn" id="3_owdnc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7paps"]
 
@@ -33,7 +34,10 @@ layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Pedigree" parent="HBox" instance=ExtResource("2_i6e33")]
+[node name="Pedigree" parent="HBox" instance=ExtResource("2_h8ms1")]
+layout_mode = 2
+
+[node name="Career" parent="HBox" instance=ExtResource("3_owdnc")]
 layout_mode = 2
 
 [node name="VBox" type="VBoxContainer" parent="HBox"]

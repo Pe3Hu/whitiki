@@ -1,0 +1,51 @@
+[
+ {
+  "title": "volume",
+  "strength": "ethos",
+  "dexterity": "kairos",
+  "intellect": "logos",
+  "will": "pathos"
+ },
+ {
+  "title": "replenishment",
+  "strength": "regeneration",
+  "dexterity": "massage",
+  "intellect": "meditation",
+  "will": "mantra"
+ },
+ {
+  "title": "tension",
+  "strength": "power",
+  "dexterity": "impetuosity",
+  "intellect": "ingenuity",
+  "will": "passion"
+ },
+ {
+  "title": "resistance",
+  "strength": "rigidity",
+  "dexterity": "flexibility",
+  "intellect": "erudition",
+  "will": "equanimity"
+ },
+ {
+  "title": "onslaught",
+  "strength": "fury",
+  "dexterity": "excitement",
+  "intellect": "calculation",
+  "will": "vow"
+ },
+ {
+  "title": "reaction",
+  "strength": "instinct",
+  "dexterity": "reflex",
+  "intellect": "intuition",
+  "will": "foresight"
+ },
+ {
+  "title": "inspection",
+  "strength": "simplicity",
+  "dexterity": "observation",
+  "intellect": "analysis",
+  "will": "prophecy"
+ }
+]

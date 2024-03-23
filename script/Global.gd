@@ -36,6 +36,8 @@ func init_arr() -> void:
 	arr.side = ["left", "right"]
 	arr.learnability = ["insight", "discipline", "overcome", "inheritance"]
 	arr.rank = ["f", "e", "d", "c", "b", "a", "s"]
+	arr.profession = ["armourer", "gunsmith", "jeweler", "witch", "alchemist", "perfumer", "engraver", "keeper", "tattooist"]
+	arr.stage = ["first", "second", "third"]
 	
 	
 	arr.phase = {
@@ -111,6 +113,7 @@ func init_dict() -> void:
 	init_nucleus()
 	init_action()
 	init_talent()
+	init_craft()
 
 
 func init_neighbor() -> void:
@@ -212,6 +215,21 @@ func init_markers() -> void:
 
 func init_aspects() -> void:
 	dict.aspect = {}
+	dict.aspect.title = {}
+	var exceptions = ["title"]
+	
+	var path = "res://asset/json/whitiki_branch.json"
+	var array = load_data(path)
+	
+	for branch in array:
+		
+		for key in branch:
+			if !exceptions.has(key):
+				var data = {}
+				data.branch = branch.title
+				data.root = key
+				dict.aspect.title[branch[key]] = data
+	
 	dict.aspect.role = {}
 	dict.aspect.role["eagle"] = {}
 	dict.aspect.role["eagle"]["offensive"] = "onslaught"
@@ -389,6 +407,46 @@ func init_talent() -> void:
 	dict.stigma.rank["blessed"] = -1
 	dict.stigma.rank["forgotten"] = 0
 	dict.stigma.rank["cursed"] = 1
+	
+	dict.proffesion = {}
+	dict.proffesion["blacksmith"] = ["armourer", "gunsmith", "jeweler"]
+	dict.proffesion["medic"] = ["witch", "alchemist", "perfumer"]
+	dict.proffesion["enhancer"] = ["engraver", "keeper", "tattooist"]
+
+
+func init_craft() -> void:
+	dict.craft = {}
+	dict.craft.title = {}
+	dict.craft.specialization = {}
+	var exceptions = ["title"]
+	
+	var path = "res://asset/json/whitiki_craft.json"
+	var array = load_data(path)
+	
+	for craft in array:
+		var data = {}
+		data.stages = {}
+		
+		for key in craft:
+			if !exceptions.has(key):
+				var words = key.split(" ")
+				
+				if words.size() > 1 and words[1] == "stage":
+					if !data.stages.has(words[0]):
+						data.stages[words[0]] = []
+				
+					data.stages[words[0]].append(craft[key])
+				else:
+					data[key] = craft[key]
+		
+		if !dict.craft.title.has(craft.title):
+			dict.craft.title[craft.title] = {}
+		
+		if !dict.craft.specialization.has(craft.specialization):
+			dict.craft.specialization[craft.specialization] = []
+		
+		dict.craft.title[craft.title] = data
+		dict.craft.specialization[craft.specialization].append(craft.title)
 
 
 func init_node() -> void:
@@ -415,7 +473,11 @@ func init_scene() -> void:
 	scene.challenger = load("res://scene/5/challenger.tscn")
 	
 	scene.aspect = load("res://scene/6/aspect.tscn")
-	scene.talent = load("res://scene/6/talent.tscn")
+	
+	scene.talent = load("res://scene/7/talent.tscn")
+	scene.craft = load("res://scene/7/craft.tscn")
+	
+	scene.pack = load("res://scene/8/pack.tscn")
 
 
 func init_vec():
@@ -433,6 +495,7 @@ func init_vec():
 	vec.size.encounter = Vector2(vec.size.token.x * 6, vec.size.token.y)
 	vec.size.channel = Vector2(vec.size.token.x * num.channel.n - 1, vec.size.token.y)
 	vec.size.talent = Vector2(vec.size.token)
+	vec.size.stage = Vector2(vec.size.token) * 0.75
 	
 	init_window_size()
 

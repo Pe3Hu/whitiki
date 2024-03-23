@@ -6,7 +6,7 @@ extends Node
 
 func _ready() -> void:
 	#datas.sort_custom(func(a, b): return a.value < b.value)
-	#012 description
+	#012 description designation
 	
 	#Global.node.sketch.playfield.start()
 	pass
@@ -18,4 +18,5 @@ func _input(event) -> void:
 			KEY_SPACE:
 				if event.is_pressed() && !event.is_echo():
 					pass
+
 

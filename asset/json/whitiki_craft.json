@@ -1,0 +1,101 @@
+[
+ {
+  "title": "armourer",
+  "specialization": "equipment",
+  "product": "armor",
+  "first stage primary aspect": "equanimity",
+  "first stage secondary aspect": "instinct",
+  "second stage primary aspect": "vow",
+  "second stage secondary aspect": "impetuosity",
+  "third stage primary aspect": "simplicity",
+  "third stage secondary aspect": "ingenuity"
+ },
+ {
+  "title": "gunsmith",
+  "specialization": "equipment",
+  "product": "weapon",
+  "first stage primary aspect": "rigidity",
+  "first stage secondary aspect": "intuition",
+  "second stage primary aspect": "fury",
+  "second stage secondary aspect": "foresight",
+  "third stage primary aspect": "simplicity",
+  "third stage secondary aspect": "ingenuity"
+ },
+ {
+  "title": "jeweler",
+  "specialization": "equipment",
+  "product": "jewelry",
+  "first stage primary aspect": "equanimity",
+  "first stage secondary aspect": "instinct",
+  "second stage primary aspect": "excitement",
+  "second stage secondary aspect": "analysis",
+  "third stage primary aspect": "prophecy",
+  "third stage secondary aspect": "impetuosity"
+ },
+ {
+  "title": "witch",
+  "specialization": "medicine",
+  "product": "potion",
+  "first stage primary aspect": "erudition",
+  "first stage secondary aspect": "reflex",
+  "second stage primary aspect": "vow",
+  "second stage secondary aspect": "impetuosity",
+  "third stage primary aspect": "analysis",
+  "third stage secondary aspect": "power"
+ },
+ {
+  "title": "alchemist",
+  "specialization": "medicine",
+  "product": "pill",
+  "first stage primary aspect": "erudition",
+  "first stage secondary aspect": "reflex",
+  "second stage primary aspect": "excitement",
+  "second stage secondary aspect": "analysis",
+  "third stage primary aspect": "observation",
+  "third stage secondary aspect": "passion"
+ },
+ {
+  "title": "perfumer",
+  "specialization": "medicine",
+  "product": "candle",
+  "first stage primary aspect": "rigidity",
+  "first stage secondary aspect": "intuition",
+  "second stage primary aspect": "vow",
+  "second stage secondary aspect": "impetuosity",
+  "third stage primary aspect": "analysis",
+  "third stage secondary aspect": "power"
+ },
+ {
+  "title": "engraver",
+  "specialization": "enchantment",
+  "product": "rune",
+  "first stage primary aspect": "equanimity",
+  "first stage secondary aspect": "instinct",
+  "second stage primary aspect": "calculation",
+  "second stage secondary aspect": "flexibility",
+  "third stage primary aspect": "observation",
+  "third stage secondary aspect": "passion"
+ },
+ {
+  "title": "keeper",
+  "specialization": "enchantment",
+  "product": "massif",
+  "first stage primary aspect": "rigidity",
+  "first stage secondary aspect": "intuition",
+  "second stage primary aspect": "fury",
+  "second stage secondary aspect": "foresight",
+  "third stage primary aspect": "analysis",
+  "third stage secondary aspect": "power"
+ },
+ {
+  "title": "tattooist",
+  "specialization": "enchantment",
+  "product": "tattoo",
+  "first stage primary aspect": "erudition",
+  "first stage secondary aspect": "reflex",
+  "second stage primary aspect": "calculation",
+  "second stage secondary aspect": "flexibility",
+  "third stage primary aspect": "prophecy",
+  "third stage secondary aspect": "impetuosity"
+ }
+]

@@ -3,6 +3,7 @@ extends MarginContainer
 
 #region vars
 @onready var pedigree = $HBox/Pedigree
+@onready var career = $HBox/Career
 @onready var channel = $HBox/VBox/Channel
 @onready var aspects = $HBox/VBox/Aspects
 
@@ -22,18 +23,15 @@ func set_attributes(input_: Dictionary) -> void:
 
 
 func init_basic_setting() -> void:
-	init_pedigree()
+	var input = {}
+	input.summary = self
+	pedigree.set_attributes(input)
 	init_predispositions()
 	init_aspects()
 	spread_aspects()
 	god.core.update_indicators()
-
-
-func init_pedigree() -> void:
-	var input = {}
-	input.summary = self
-	pedigree.set_attributes(input)
 	channel.set_attributes(input)
+	career.set_attributes(input)
 
 
 func init_predispositions() -> void:
@@ -124,6 +122,11 @@ func get_aspect_based_on_root_and_branch(root_: String, branch_: String) -> Marg
 	var b = Global.arr.branch.find(branch_)
 	var index = b * Global.arr.root.size() + a
 	return aspects.get_child(index)
+
+
+func get_aspect_based_on_designation(designation_: String) -> MarginContainer:
+	var data = Global.dict.aspect.title[designation_]
+	return get_aspect_based_on_root_and_branch(data.root, data.branch)
 #endregion
 
 
