@@ -103,3 +103,9 @@ func set_number(value_) -> void:
 func set_subtype(subtype_: String) -> void:
 	subtype = subtype_
 	update_image()
+
+
+func convert_to_percentage() -> void:
+	number.visible = false
+	text.text = str(subtype) + "%"
+	text.visible = true

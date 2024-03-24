@@ -5,12 +5,14 @@ extends MarginContainer
 @onready var gods = $Gods
 
 var pantheon = null
+var rank = null
 #endregion
 
 
 #region init
 func set_attributes(input_: Dictionary) -> void:
 	pantheon = input_.pantheon
+	rank = "f"
 	
 	init_basic_setting()
 
@@ -22,30 +24,32 @@ func init_basic_setting() -> void:
 
 
 func init_gods() -> void:
-	var rank = "f"
+	for _i in 1:
+		add_god()
 	
-	for _i in 10:
-		var input = {}
-		input.pantheon = pantheon
-		input.rank = rank
-	
-		var god = Global.scene.god.instantiate()
-		gods.add_child(god)
-		god.set_attributes(input)
-	
-	var steps = {}
-	var count = 0
-	
-	for god in gods.get_children():
-		for talent in god.summary.pedigree.learnabilities.get_children():
-			var step = Global.arr.rank.find(talent.rank.subtype) - Global.arr.rank.find(rank)
-			
-			if step > 0:
-				if !steps.has(step):
-					steps[step] = 0
-				
-				steps[step] += 1
-				count += step
+	#var steps = {}
+	#var count = 0
+	#
+	#for god in gods.get_children():
+		#for talent in god.summary.pedigree.learnabilities.get_children():
+			#var step = Global.arr.rank.find(talent.rank.subtype) - Global.arr.rank.find(rank)
+			#
+			#if step > 0:
+				#if !steps.has(step):
+					#steps[step] = 0
+				#
+				#steps[step] += 1
+				#count += step
+
+
+func add_god() -> void:
+	var input = {}
+	input.pantheon = pantheon
+	input.rank = rank
+
+	var god = Global.scene.god.instantiate()
+	gods.add_child(god)
+	god.set_attributes(input)
 
 
 func sort_gods() -> void:
@@ -88,13 +92,13 @@ func sort_gods() -> void:
 
 func pull_up_learnability(god_: MarginContainer) -> void:
 	for talent in god_.summary.pedigree.learnabilities.get_children():
-		var rank = talent.rank.subtype
+		var _rank = talent.rank.subtype
 		
-		if god_.rank == rank:
+		if god_.rank == _rank:
 			#print(talent.designation.subtype)
-			var index = Global.arr.rank.find(rank) + 1
-			rank = Global.arr.rank[index]
-			talent.rank.set_subtype(rank)
+			var index = Global.arr.rank.find(_rank) + 1
+			_rank = Global.arr.rank[index]
+			talent.rank.set_subtype(_rank)
 
 
 func pull_gods_into_pantheon() -> void:

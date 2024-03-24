@@ -5,6 +5,7 @@ extends MarginContainer
 @onready var marker = $HBox/VBox/HBox/Marker
 @onready var core = $HBox/VBox/HBox/Core
 @onready var summary = $HBox/VBox/Summary
+@onready var memory = $HBox/Memory
 
 var pantheon = null
 var rank = null
@@ -26,6 +27,7 @@ func init_basic_setting() -> void:
 	input.god = self
 	core.set_attributes(input)
 	summary.set_attributes(input)
+	memory.set_attributes(input)
 	init_marker()
 
 

@@ -19,4 +19,3 @@ func _input(event) -> void:
 				if event.is_pressed() && !event.is_echo():
 					pass
 
-

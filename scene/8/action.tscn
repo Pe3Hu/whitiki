@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0avi2sr1w4fg"]
+
+[ext_resource type="PackedScene" uid="uid://dcuiscticuvbh" path="res://scene/0/token.tscn" id="1_qa4k0"]
+[ext_resource type="Script" path="res://scene/8/action.gd" id="2_y3tbb"]
+[ext_resource type="PackedScene" uid="uid://ciw38iqel0v5a" path="res://scene/0/icon.tscn" id="3_obfdr"]
+
+[node name="Action" instance=ExtResource("1_qa4k0")]
+script = ExtResource("2_y3tbb")
+
+[node name="Value" parent="." index="2"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Count" parent="." index="3" instance=ExtResource("3_obfdr")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="Probability" parent="." index="4" instance=ExtResource("3_obfdr")]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8

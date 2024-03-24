@@ -32,13 +32,14 @@ func init_arr() -> void:
 	arr.root = ["strength", "dexterity", "intellect", "will"]
 	arr.branch = ["volume", "replenishment", "tension", "resistance", "onslaught", "reaction", "inspection"]
 	arr.indicator = ["health", "endurance"]
-	arr.role = ["offensive", "defensive"]
+	arr.role = ["offense", "defense"]
 	arr.side = ["left", "right"]
 	arr.learnability = ["insight", "discipline", "overcome", "inheritance"]
 	arr.rank = ["f", "e", "d", "c", "b", "a", "s"]
 	arr.profession = ["armourer", "gunsmith", "jeweler", "witch", "alchemist", "perfumer", "engraver", "keeper", "tattooist"]
 	arr.stage = ["first", "second", "third"]
-	
+	arr.synchronization = ["low", "medium", "high"]
+	arr.extreme = ["min", "max"]
 	
 	arr.phase = {
 		"lead fraction": [
@@ -111,7 +112,7 @@ func init_dict() -> void:
 	
 	init_land()
 	init_nucleus()
-	init_action()
+	init_skill()
 	init_talent()
 	init_craft()
 
@@ -232,11 +233,11 @@ func init_aspects() -> void:
 	
 	dict.aspect.role = {}
 	dict.aspect.role["eagle"] = {}
-	dict.aspect.role["eagle"]["offensive"] = "onslaught"
-	dict.aspect.role["eagle"]["defensive"] = "reaction"
+	dict.aspect.role["eagle"]["offense"] = "onslaught"
+	dict.aspect.role["eagle"]["defense"] = "reaction"
 	dict.aspect.role["deer"] = {}
-	dict.aspect.role["deer"]["offensive"] = "tension"
-	dict.aspect.role["deer"]["defensive"] = "resistance"
+	dict.aspect.role["deer"]["offense"] = "tension"
+	dict.aspect.role["deer"]["defense"] = "resistance"
 	
 	dict.aspect.weight = {}
 	dict.aspect.weight["volume"] = 12
@@ -348,18 +349,18 @@ func init_nucleus() -> void:
 		dict.nucleus.title[nucleus.title] = data
 
 
-func init_action() -> void:
-	dict.action = {}
-	dict.action.role = {}
+func init_skill() -> void:
+	dict.skill = {}
+	dict.skill.role = {}
 	var exceptions = ["role", "type"]
 	
-	var path = "res://asset/json/whitiki_action.json"
+	var path = "res://asset/json/whitiki_skill.json"
 	var array = load_data(path)
 	
-	for action in array:
+	for skill in array:
 		var data = {}
 		
-		for key in action:
+		for key in skill:
 			if !exceptions.has(key):
 				var words = key.split(" ")
 				
@@ -367,17 +368,21 @@ func init_action() -> void:
 					if !data.has(words[1]):
 						data[words[1]] = {}
 				
-					data[words[1]][words[0]] = action[key]
+					data[words[1]][words[0]] = skill[key]
 				else:
-					data[key] = action[key]
+					data[key] = skill[key]
 		
-		if !dict.action.role.has(action.role):
-			dict.action.role[action.role] = {}
+		if !dict.skill.role.has(skill.role):
+			dict.skill.role[skill.role] = {}
 		
-		if !dict.action.role[action.role].has(action.type):
-			dict.action.role[action.role][action.type] = []
+		if !dict.skill.role[skill.role].has(skill.type):
+			dict.skill.role[skill.role][skill.type] = []
 		
-		dict.action.role[action.role][action.type].append(data)
+		dict.skill.role[skill.role][skill.type].append(data)
+	
+	dict.skill.branch = {}
+	dict.skill.branch["offense"] = "tension"
+	dict.skill.branch["defense"] = "resistance"
 
 
 func init_talent() -> void:
@@ -478,6 +483,8 @@ func init_scene() -> void:
 	scene.craft = load("res://scene/7/craft.tscn")
 	
 	scene.pack = load("res://scene/8/pack.tscn")
+	scene.skill = load("res://scene/8/skill.tscn")
+	scene.action = load("res://scene/8/action.tscn")
 
 
 func init_vec():
@@ -496,6 +503,8 @@ func init_vec():
 	vec.size.channel = Vector2(vec.size.token.x * num.channel.n - 1, vec.size.token.y)
 	vec.size.talent = Vector2(vec.size.token)
 	vec.size.stage = Vector2(vec.size.token) * 0.75
+	vec.size.action = Vector2(vec.size.token) * 1.5
+	vec.size.extreme = Vector2(vec.size.action) * 0.5
 	
 	init_window_size()
 

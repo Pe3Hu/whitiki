@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvw6167bcc2y3"]
+
+[ext_resource type="Script" path="res://scene/8/skill.gd" id="1_7f6i3"]
+[ext_resource type="PackedScene" uid="uid://djd8r75j83skv" path="res://scene/8/synchronization.tscn" id="2_pu5cw"]
+[ext_resource type="PackedScene" uid="uid://bdap55o6u6f2r" path="res://scene/6/aspect.tscn" id="3_uu8fb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7paps"]
+
+[node name="Skill" type="MarginContainer"]
+custom_minimum_size = Vector2(5, 5)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_7f6i3")
+
+[node name="BG" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7paps")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Aspects" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="First" parent="HBox/Aspects" instance=ExtResource("3_uu8fb")]
+layout_mode = 2
+
+[node name="Second" parent="HBox/Aspects" instance=ExtResource("3_uu8fb")]
+layout_mode = 2
+
+[node name="Synchronizations" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="High" parent="HBox/Synchronizations" instance=ExtResource("2_pu5cw")]
+layout_mode = 2
+
+[node name="Medium" parent="HBox/Synchronizations" instance=ExtResource("2_pu5cw")]
+layout_mode = 2
+
+[node name="Low" parent="HBox/Synchronizations" instance=ExtResource("2_pu5cw")]
+layout_mode = 2

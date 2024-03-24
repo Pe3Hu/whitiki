@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6xt38h3tpi5k"]
+[gd_scene load_steps=7 format=3 uid="uid://b6xt38h3tpi5k"]
 
 [ext_resource type="Script" path="res://scene/1/god.gd" id="1_ceqed"]
+[ext_resource type="PackedScene" uid="uid://drqlevpm5e3p8" path="res://scene/8/memory.tscn" id="2_lqgxj"]
 [ext_resource type="PackedScene" uid="uid://dcuiscticuvbh" path="res://scene/0/token.tscn" id="3_gq8cf"]
 [ext_resource type="PackedScene" uid="uid://likoypjmwtku" path="res://scene/6/core.tscn" id="3_ited5"]
 [ext_resource type="PackedScene" uid="uid://bf62c6vgstb83" path="res://scene/6/summary.tscn" id="4_8kv7q"]
@@ -33,6 +34,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_7paps")
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
+
+[node name="Memory" parent="HBox" instance=ExtResource("2_lqgxj")]
+layout_mode = 2
 
 [node name="VBox" type="VBoxContainer" parent="HBox"]
 layout_mode = 2
